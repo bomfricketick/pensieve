@@ -21,15 +21,15 @@ import Table from '../components/Table.vue';
     <main class="flex flex-row grow">
 
 
-        <div class="basis-1/4 bg-gray-200 m-2 px-2">
+        <div class="basis-1/4 bg-gray-600 m-2 px-2">
             Entity selector goes here:
         </div>
         <div class="basis-3/4 m-2">
             <div class="flex flex-col h-full">
-                <div class="basis-3/5 overflow-hidden mb-2 border border-gray-600"> 
+                <div class="basis-3/5 overflow-y-auto mb-2 border border-gray-600"> 
                     <Table />
                 </div>
-                <div class="basis-2/5 bg-gray-400 ">
+                <div class="basis-2/5 bg-gray-600 ">
                     Multi purpose area:
                         - show column detail
                         - transpose

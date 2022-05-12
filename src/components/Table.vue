@@ -4,8 +4,8 @@ const columns = [
     { name: "Data type" },
     { name: "Source table" },
     { name: "Source column" },
-    { name: "is nullable" },
-    { name: "is identity" },
+    { name: "null" },
+    { name: "identity" },
     { name: "Attribute" },
     { name: "Order" },
     { name: "Column Description" }
@@ -214,22 +214,21 @@ const table = {
 
 <template>
 
-    <div class="w-full h-full shadow-md sm:rounded-lg">
-        <div class=" py-1 px-2 text-xs bg-gray-900 text-gray-200 "> 
+    <div class="w-full max-h-fit  shadow-md sm:rounded-lg">
+        <div class=" py-1 px-2 text-xs bg-gray-900 text-gray-200 select-none">
             {{ table.schema }}.{{ table.table }}.Columns - TODO: need to change scrolling to keep column titles on top
         </div>
-        <table
-            class="w-full h-full overflow-hidden table-auto text-sm text-left text-gray-500 dark:text-gray-400 ">
-            <thead class="w-full text-xs text-gray-700 capitalized  bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                <tr class="">
-                    <th v-for="column, idx in columns" :key="idx" scope="col" class="px-2 py-2  whitespace-nowrap">
+        <table class="w-full  table-auto text-sm text-left text-gray-500 dark:text-gray-400 ">
+            <thead class="w-full sticky top-0 text-xs text-gray-700 capitalized  bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                <tr class="select-none">
+                    <th v-for="column, idx in columns" :key="idx" scope="col" class="px-2 py-2  truncate  ">
                         {{ column.name }}
                     </th>
                 </tr>
             </thead>
-            <tbody class="w-full h-full  overflow-y-auto">
+            <tbody class="w-full overflow-y-scroll" style="height: 50vh;">
                 <tr v-for="(column, idx) in table.columns" :key="column.name"
-                    class="text-xs bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                    class="text-xs h-6 bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 select-none">
 
                     <td scope="row" class="px-2 font-normal dark:text-white whitespace-nowrap">
                         {{ column.name }}
@@ -269,10 +268,10 @@ const table = {
                     </td>
 
                     <td class="px-2">
-                        {{ idx + 1 }}0
+                        {{ (idx + 1) * 10 }}
                     </td>
 
-                    <td class="px-2">
+                    <td class="px-2 truncate">
                         s
                     </td>
                 </tr>

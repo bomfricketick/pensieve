@@ -3,7 +3,6 @@ import BaseSearch from '../components/base/BaseSearch.vue'
 import { CubeIcon } from '@heroicons/vue/outline'
 import Table from '../components/Table.vue';
 
-
 </script>
 
 
@@ -18,24 +17,34 @@ import Table from '../components/Table.vue';
             </div>
         </div>
     </nav>
-    <main class="flex flex-row grow">
+    <main class="flex flex-row grow ">
 
-
-        <div class="basis-1/4 bg-gray-600 m-2 px-2">
+        <div class="w-80 shrink-0  bg-gray-900 text-gray-100  px-2 ">
             Entity selector goes here:
         </div>
-        <div class="basis-3/4 m-2">
+        <div class="w-1 bg-gray-600 hover:bg-blue-700 cursor-col-resize" ></div>
+        <div class="grow ">
             <div class="flex flex-col h-full">
-                <div class="basis-3/5 overflow-y-auto mb-2 border border-gray-600"> 
+                <div class="basis-1/5 overflow-hidden  "> 
                     <Table />
                 </div>
-                <div class="basis-2/5 bg-gray-600 ">
-                    Multi purpose area:
-                        - show column detail
-                        - transpose
-                        - join 
+                <div class="h-1  bg-gray-600 hover:bg-blue-700 cursor-row-resize" ></div>
+                <div class="basis-2/5 text-gray-200 ">
+                    
+                        Multi purpose area:
+                            - show column detail
+                            - transpose
+                            - join 
+
+                   
                 </div>
             </div>
         </div>
+
+        <div class="w-1 bg-gray-600 hover:bg-blue-700 cursor-col-resize" ></div>
+        <div class="w-80">
+
+        </div>
     </main>
 </template>
+

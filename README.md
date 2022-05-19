@@ -1,5 +1,10 @@
 # Pensieve ![example workflow](https://github.com/bomfricketick/pensieve/actions/workflows/node.js.yml/badge.svg)
 
+This is a personal project to explore and learn Vue. 
+Main goal is to build some web app that can connect to a database, read and import meta data to draw the model.
+Manipulate the meta data to generate a logical data vault than later can be materialisezed and genereate code to build and load it
+
+
 Scope:  
 - [x] Load data into warehouse is not in scope
 - [ ] Connect to database (data warehouse)  

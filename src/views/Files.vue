@@ -24,7 +24,7 @@ import Table from '../components/Table.vue';
         <!-- Refector DragCol and DragRow to only use Tailwind -->
         <!-- also refator to use composition API instead of options API -->
         <DragCol height="100%" width="100%" :leftPercent="20" :sliderWidth="4" :sliderBgHoverColor="'#1E40AF'">
-            <template #left class="w-80">
+            <template #left >
                 <div class="h-full text-white bg-gray-900">
                     s
 

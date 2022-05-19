@@ -4,13 +4,13 @@
 // import { HomeIcon, BellIcon, FolderIcon, ClockIcon, StarIcon, PlusIcon, CubeIcon } from '@heroicons/vue/outline'
 // import { ViewGridIcon, QuestionMarkCircleIcon } from '@heroicons/vue/solid'
 
-// import Sidebar from './components/Sidebar.vue'
+import Sidebar from '../components/Sidebar.vue'
 </script>
 
 <template>
   <div class="flex flex-1 flex-col overflow-hidden">
     <div class="flex flex-1 overflow-hidden bg-gray-50 dark:bg-gray-800">
-      <!-- <Sidebar /> -->
+      <Sidebar />
       <div class="flex flex-1 flex-col h-full">
         <router-view />
       </div>

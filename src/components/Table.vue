@@ -226,7 +226,7 @@ const table = {
                     </th>
                 </tr>
             </thead>
-            <tbody class="w-full overflow-y-scroll" style="height: 50vh;">
+            <tbody class="w-full overflow-y-scroll" >
                 <tr v-for="(column, idx) in table.columns" :key="column.name"
                     class="text-xs h-6 bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 select-none">
 

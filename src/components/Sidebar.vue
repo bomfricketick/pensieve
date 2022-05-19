@@ -36,7 +36,7 @@ const Navigation = {
         },
         {
             title: 'Profile',
-            to: 'Favorites',
+            to: 'User',
             icon: 'UserIcon'
         }
     ]
@@ -45,7 +45,7 @@ const Navigation = {
 </script>
 
 <template>
-    <div class="flex flex-col justify-between overflow-hidden flex-shrink-0 bg-cyan-900">
+    <div class="flex flex-col justify-between overflow-hidden flex-shrink-0 bg-gray-900">
         <div>
             <div v-for="(link, idx) in Navigation.upper" :key="idx">
                 <router-link class="flex items-center group hover:bg-cyan-800" :title="link.title"

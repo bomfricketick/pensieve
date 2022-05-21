@@ -22,6 +22,11 @@ const routes = [
                 component: () => import(/* webpackChunkName: "Repository" */ "../views/Repository.vue"),
                 children: [
                     {
+                        path: "settings",
+                        name: "RepositorySettings",
+                        component: () => import(/* webpackChunkName: "RepositorySettings" */ "../views/RepositorySettings.vue")
+                    },
+                    {
                         path: "files",
                         name: "Files",
                         component: () => import(/* webpackChunkName: "Files" */ "../views/Files.vue")

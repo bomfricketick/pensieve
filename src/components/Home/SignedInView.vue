@@ -183,7 +183,10 @@ const repos = [
                                 </div>
     
                                 <div>
-                                    <button class="w-full py-1 rounded-md border border-gray-500 text-sm bg-gray-600 text-gray-100">Edit profile</button>
+                                    <button class="w-full py-1 rounded-md border border-gray-500 text-sm bg-gray-600 text-gray-100"
+                                        @click="$router.push({ name: 'User', params: { username: 'bomfricketick' } })">
+                                            Edit profile
+                                    </button>
                                 </div>
                             </div>
     

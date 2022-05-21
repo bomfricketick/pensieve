@@ -25,11 +25,6 @@ const Navigation = {
     ],
     lower: [
         {
-            title: 'Settings',
-            to: 'Favorites',
-            icon: 'ViewGridIcon'
-        },
-        {
             title: 'About',
             to: 'Favorites',
             icon: 'QuestionMarkCircleIcon'
@@ -38,6 +33,11 @@ const Navigation = {
             title: 'Profile',
             to: 'User',
             icon: 'UserIcon'
+        },
+        {
+            title: 'Settings',
+            to: 'RepositorySettings',
+            icon: 'CogIcon'
         }
     ]
 }
@@ -72,7 +72,7 @@ const Navigation = {
 
 <script>
 import { ViewGridIcon, QuestionMarkCircleIcon, UserIcon } from '@heroicons/vue/solid'
-import { HomeIcon, BellIcon, FolderIcon, ClockIcon, StarIcon, PlusIcon, CubeIcon } from '@heroicons/vue/outline'
+import { HomeIcon, BellIcon, FolderIcon, ClockIcon, StarIcon, PlusIcon, CubeIcon, CogIcon } from '@heroicons/vue/outline'
 export default {
     components: {
         ViewGridIcon,
@@ -84,7 +84,8 @@ export default {
         StarIcon,
         PlusIcon,
         CubeIcon,
-        UserIcon
+        UserIcon,
+        CogIcon
     }
 }
 </script>

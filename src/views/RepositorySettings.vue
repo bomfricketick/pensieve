@@ -5,6 +5,7 @@ import BaseInput from '../components/base/BaseInput.vue';
 import ShowInput from '../components/base/ShowInput.vue';
 import { TrashIcon } from '@heroicons/vue/outline';
 
+
 const settings = reactive([
     {
         id: 1,
@@ -48,6 +49,7 @@ const settings = reactive([
             {
                 id: 1,
                 title: 'Development',
+                type: 'Development',
                 date: 'Jan 7',
                 commentCount: 29,
                 shareCount: 16,
@@ -55,6 +57,7 @@ const settings = reactive([
             {
                 id: 2,
                 title: 'Test',
+                type: 'Test',
                 date: 'Mar 19',
                 commentCount: 24,
                 shareCount: 12,
@@ -62,6 +65,7 @@ const settings = reactive([
             {
                 id: 3,
                 title: 'Production',
+                type: 'Production',
                 date: 'Apr 12',
                 commentCount: 12,
                 shareCount: 8,
@@ -77,16 +81,18 @@ const settings = reactive([
             {
                 id: 1,
                 title: 'Ask Me Anything',
+                description: 'Ask Me Anything is a service that allows you to ask a question and get an answer from a bot.',
                 date: '2d ago',
-                enviroment: [{name: 'Development', color: 'yellow'}, {name: 'Test', color: 'emerald'}, {name: 'Production', color: 'blue'}],
+                enviroment: [{name: '', type: 'Development'}, {name: '', type: 'Test' }, {name:'', type: 'Production' }],
                 commentCount: 9,
                 shareCount: 5,
             },
             {
                 id: 2,
                 title: "heard about coffee",
+                description: 'heard about coffee is a service that allows you to ask a question and get an answer from a bot.',
                 date: '4d ago',
-                enviroment: [{name: 'Production', color: 'blue'}, {name: 'Test', color: 'emerald'}],
+                enviroment: [{name: '', type: 'Production' }, {name: '', type: 'Test'}],
                 commentCount: 1,
                 shareCount: 2,
             },
@@ -97,7 +103,7 @@ const settings = reactive([
 </script>
 
 <template>
-    <div class="flex flex-col h-full bg-gray-90 overflow-hidden">
+    <div class="flex flex-col h-full bg-gray-900 overflow-hidden">
         <div class="overflow-y-auto">
             <div class="w-2/3 mx-auto px-8 pb-4 mt-10 bg-gray-900 ">
                 <div class="flex text-gray-300 ">
@@ -108,9 +114,9 @@ const settings = reactive([
                                 v-slot="{ selected }">
                                 <button :class="[
                                     'w-full text-left px-4 rounded-lg py-2.5 text-sm font-medium leading-5 text-white',
-                                    'ring-white ring-opacity-60  ring-offset-blue-400 focus:outline-none focus:ring-2',
+                                    'ring-blue-400 ring-opacity-60  ring-offset-blue-400 focus:outline-none focus:ring-2',
                                     selected
-                                        ? 'bg-gray-700 shadow'
+                                        ? 'bg-gray-800 shadow'
                                         : 'text-blue-100 hover:bg-white/[0.12] hover:text-white',
                                 ]">
                                     {{ category.name }}
@@ -144,24 +150,35 @@ const settings = reactive([
                                 </ul>
 
                                 <div v-if="posts.data">
-                                    <p class="text-sm mb-4"> {{posts.description}} </p>
-                                    <ul  class="rounded-md border border-gray-700">
+                                    <p class="text-sm mb-4"> {{ posts.description }} </p>
+                                    <ul class="rounded-md border border-gray-700">
                                         <li v-for="item in posts.data" :key="item.id">
-                                            <div class="relative flex justify-between bg-b items-center py-2 px-3 hover:bg-gray-800">
-                                                <p class="flex items-center ">
-                                                    {{ item.title }}
-                                                    <div v-for="env in item.enviroment" :key="env">
-                                                        <p class="mx-1 px-1  text-xs " :class="'bg-' + env.color + '-700'">
-                                                            {{env.name}}
+                                            <div
+                                                class="relative flex justify-between bg-b items-center py-2 px-3 hover:bg-gray-800">
+                                                <div class="flex-col">
+                                                    <p class="">
+                                                        {{ item.title }}
+                                                    </p>
+                                                    <p v-if="item.description" class="text-xs text-gray-400">
+                                                        {{ item.description }}
+                                                    </p>
+                                                    <div v-if="item.enviroment" class="flex space-x-4 my-2">
+                                                        <p v-for="env in item.enviroment" :key="env"
+                                                            class="text-xs px-2 py-0.5" :class="{
+                                                                'bg-red-600 text-white': env.type === 'Production',
+                                                                'bg-blue-600 text-white': env.type === 'Development',
+                                                                'bg-yellow-400 text-black': env.type === 'Test',
+                                                            }">
+                                                            {{ env.type }}
                                                         </p>
                                                     </div>
-                                                </p>
+                                                </div>
                                                 <TrashIcon class="h-4 w-4" />
 
                                                 <a href="#" :class="[
                                                     'absolute inset-0 rounded-md',
                                                     'ring-blue-400 focus:z-10 focus:outline-none focus:ring-2',
-                                                ]"/>
+                                                ]" />
 
                                             </div>
 

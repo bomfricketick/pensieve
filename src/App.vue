@@ -1,10 +1,13 @@
 <script setup>
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-// import { HomeIcon, BellIcon, FolderIcon, ClockIcon, StarIcon, PlusIcon, CubeIcon } from '@heroicons/vue/outline'
-// import { ViewGridIcon, QuestionMarkCircleIcon } from '@heroicons/vue/solid'
+import { onMounted } from 'vue';
+import { useUIStore } from './stores/ui';
 
-// import Sidebar from './components/Sidebar.vue'
+const uiStore = useUIStore();
+
+onMounted(() => {
+  uiStore.initialiseTheme()
+});
+
 </script>
 
 <template>

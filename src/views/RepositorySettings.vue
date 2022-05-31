@@ -5,6 +5,9 @@ import BaseInput from '../components/base/BaseInput.vue';
 import ShowInput from '../components/base/ShowInput.vue';
 import { TrashIcon } from '@heroicons/vue/outline';
 
+import { useUIStore } from '../stores/ui';
+const uiStore = useUIStore();
+
 
 const settings = reactive([
     {

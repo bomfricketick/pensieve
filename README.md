@@ -4,8 +4,6 @@ This is a personal project to explore and learn Vue.
 Main goal is to build some web app that can connect to a database, read and import meta data to draw the model.
 Manipulate the meta data to generate a logical data vault than later can be materialisezed and genereate code to build and load it.
 
-test
-
 Scope:  
 - [x] Possibility to work on different projects
 - [ ] Define project environment (dev, test, prod etc)

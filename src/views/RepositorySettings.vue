@@ -4,14 +4,10 @@ import { TabGroup, TabList, Tab, TabPanels, TabPanel, Disclosure, DisclosureButt
 import BaseInput from '../components/base/BaseInput.vue';
 import ShowInput from '../components/base/ShowInput.vue';
 import { TrashIcon, ChevronUpIcon } from '@heroicons/vue/outline';
-
-import { useUIStore } from '../stores/ui';
-const uiStore = useUIStore();
-
 import BaseModal from '../components/base/BaseModal.vue';
-
 import { useUIStore } from '../stores/ui';
 import NewEnvironment from '../components/environment/NewEnvironment.vue';
+
 const uiStore = useUIStore();
 
 // function openCreateEnvironmentModal() {

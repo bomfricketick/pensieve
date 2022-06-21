@@ -7,7 +7,7 @@ Manipulate the meta data to generate a logical data vault than later can be mate
 
 Scope:  
 - [x] Possibility to work on different projects
-- [ ] Define project environment (dev, test, prod etc)
+- [ ] Define project environment
 - [ ] Store secrets in environment
 - [ ] Define connection to source
 - [ ] Connect to source and browse it's content

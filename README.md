@@ -65,11 +65,16 @@ Scope:
 
 ```mermaid
 flowchart LR
-    A([Web browser])-->|HTML, CSS, Javascript, etc| B([Amplify])
+    subgraph aws
+    direction LR
+        B
+        C 
+        D-->E([Lambda])
+        E-->F([DynamoDB])
+    end
     A-->|Authenticate| C([Cognito]) 
     A-->|Dynamic API Calls over https| D([API Gateway])
-    D-->E([Lambda])
-    E-->F([DynamoDB])
+    A([Web browser])-->|HTML, CSS, Javascript, etc| B([Amplify])
 ```
 
 

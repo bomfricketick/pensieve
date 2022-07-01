@@ -6,12 +6,12 @@ Add more meta data to generate a logical raw data vault model. Use the logical m
 
 ```mermaid
 flowchart LR
-  subgraph pensieve [ ]
+  subgraph pensieve [pensieve]
     direction TB 
     subgraph meta [ ]
         direction LR
         s1{{visualise the source data model}} --> s2(tag meta data)
-        s1 --> s3(add fk const to model)
+        s1 --> s3(add fk const to improve model)
         s1 --> s4(Additional attrs)
     end
     subgraph vault [ ]

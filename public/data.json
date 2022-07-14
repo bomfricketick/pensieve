@@ -1,0 +1,24 @@
+{
+    "info": [
+        {
+            "message": "Hello this is the first greeting"
+        },
+        {
+            "message": "This is the second greeting with some extra info"
+        },
+        {
+            "message": "How can I help you today?"
+        }
+    ],
+    "option": [
+        {
+            "message": "I just want to say hello"
+        },
+        {
+            "message": "I'd like to get in touch"
+        },
+        {
+            "message": "lol"
+        }
+    ]
+}

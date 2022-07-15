@@ -83,7 +83,7 @@ erDiagram
 ``` -->
 
 
-Scope:  
+<!-- Scope:  
 - [x] Possibility to work on different projects
 - [ ] Define project environment
 - [ ] Store secrets in environment
@@ -95,7 +95,7 @@ Scope:
 - [ ] Create all physical tables, views and stored procedures for targeted platform 
 - [ ] Choose how to execute and schedule jobs to load target platform with data
 - [ ] Display lineage source -> target  
-- [ ] Document everything  
+- [ ] Document everything   -->
 
 
 

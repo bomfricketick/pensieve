@@ -19,7 +19,7 @@ flowchart LR
 ```
 
 
-## Basic concept
+### Basic concept
 Main goal is to build a web app that can connect to a database, read and import metadata to draw it's data model. 
 Add more metadata to generate a logical raw data vault model. Use the logical model to create business layer on top of the raw vault. Then generate code to create and load data into targeted platform.  
 Genereated code will utilize jinja2 templates to make it easy to update the templates to follow a specific pattern valid for each user. All generated code will be accessable to the user and can be stored in git.  
@@ -62,12 +62,12 @@ flowchart LR
 
 
 ```
-## Data model
-All metadata extracted from source and created in app is stored in a database or git repo (An interesting repo to explore regarding storing metadata for dwa: https://github.com/RoelantVos/Data-Warehouse-Automation-Metadata-Schema/blob/master/Documentation/DataWarehouseAutomationInterface.md).  
+### Data model
+All metadata extracted from source and created in app is stored in a database or git repo. Would prefer to store as files to more easaliy version control it. (An interesting repo to explore regarding storing metadata for dwa: https://github.com/RoelantVos/Data-Warehouse-Automation-Metadata-Schema/blob/master/Documentation/DataWarehouseAutomationInterface.md).  
 It's used to generate code to build the data warehouse.  
 No secrets or actual data will ever be stored in the database, only descriptive data.
 
-```mermaid
+<!-- ```mermaid
 erDiagram
     owner ||--o{ project : owns
     project ||--o{ user : have   
@@ -80,23 +80,6 @@ erDiagram
     dataItem ||--o{ dataTag : have
     dataObject ||--o{ dataTag : have
     tag ||--o{ dataTag : have
-```
-
-<!-- ```mermaid
-flowchart LR
-    owner --- project
-    project --- user
-    project --- environment
-    connection --- source
-    connection --- secret
-    environment --- secret
-    environment --- connection
-    source --- schema
-    schema --- table
-    table --- column 
-    tag --- table_column_tag
-    table --- table_column_tag
-    column --- table_column_tag
 ``` -->
 
 
@@ -123,7 +106,7 @@ Scope:
 We'll use Vue 3 `<script setup>` SFCs as much as possible, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.  
 
 
-## Recommended IDE Setup  
+#### Recommended IDE Setup  
 
 - [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar)
 
